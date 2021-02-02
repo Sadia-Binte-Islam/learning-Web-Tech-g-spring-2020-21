@@ -1,0 +1,37 @@
+<admissions>
+<admission SL.NO.='23'
+<NAME>John Carter</NAME>
+<ADDMISSION_DATE>
+<date='25'
+<month='12'
+<year='2015'
+</year>
+</month>
+</date>
+</ADDMISSION_DATE>
+</admission>
+
+<admission SL.NO.='29'
+<NAME>Bob Marshal</NAME>
+<ADDMISSION_DATE>
+<date='13'
+<month='01'
+<year='1999'
+</year>
+</month>
+</date>
+</ADDMISSION_DATE>
+</admission>
+
+<admission SL.NO.='35'
+<NAME>Clark Kent</NAME>
+<ADDMISSION_DATE>
+<date='17'
+<month='06'
+<year='2005'
+</year>
+</month>
+</date>
+</ADDMISSION_DATE>
+</admission>
+</admissions>
