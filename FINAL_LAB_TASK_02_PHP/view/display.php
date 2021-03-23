@@ -14,14 +14,14 @@
 			<td></td>
 		</tr>";
 	
-		$row=getAllUser();
+		$row=getAllProduct();
 		
 		foreach($row as $var){
 			
 			echo "
 					<tr>
 						<td>{$var['name']}</td>
-						<td>{$var['sprice']}</td>
+						<td>{$var['profit']}</td>
 						<td><a href='edit.php?id={$var['ID']}'>edit</a> |
 							<a href='../controller/delete.php?id={$var['ID']}'>delete</a>
 						</td>

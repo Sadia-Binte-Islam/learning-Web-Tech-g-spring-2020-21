@@ -4,7 +4,8 @@
 
     function insertProduct($products){
         $conn = getConnection();
-        $sql = "insert into products values('', '{$products['name']}', '{$products['bprice']}', '{$products['sprice']}', '' )";
+        $profit=$products['sprice']-$products['bprice'];
+        $sql = "insert into products values('', '{$products['name']}', '{$products['bprice']}', '{$products['sprice']}', '{$profit}' )";
     
         $result = mysqli_query($conn, $sql);
     
@@ -13,10 +14,9 @@
         }else{
             return false;
         }
-    
     }
 
-    function getAllUser(){
+    function getAllProduct(){
 
         $conn = getConnection();
         $sql = "select * from produts";
