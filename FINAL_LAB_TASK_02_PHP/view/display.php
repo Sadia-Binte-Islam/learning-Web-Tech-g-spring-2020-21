@@ -23,7 +23,7 @@
 						<td>{$var['name']}</td>
 						<td>{$var['profit']}</td>
 						<td><a href='edit.php?id={$var['ID']}'>edit</a> |
-							<a href='../controller/delete.php?id={$var['ID']}'>delete</a>
+							<a href='../view/deletep.php?id={$var['ID']}'>delete</a>
 						</td>
 						
 				";
@@ -37,6 +37,3 @@
 ?>
 
 	
-<?php
-	include('footer.php');
-?>
