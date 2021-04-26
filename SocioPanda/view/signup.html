@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+</head>
+<body bgcolor="#8585e0">
+	<form method="post" action="../controller/regCheck.php">
+		<fieldset>
+			<legend >Register As A Seller</legend>
+			<table>
+				<tr>
+					<td style="color:white;font-size:18px;">Username</td>
+					<td><input type="text" name="username"placeholder="Enter your Username" value=""></td>
+				</tr>
+				<tr>
+					<td style="color:white;font-size:18px;">Password</td>
+					<td><input type="password" name="password"placeholder="Enter your password" value=""></td>
+				</tr>
+				<tr>
+					<td style="color:white;font-size:18px;">Confirm Password</td>
+					<td><input type="password" name="repass"placeholder="RE-Enter your Password" value=""></td>
+				</tr>
+				<tr>
+					<td style="color:white;font-size:18px;">Email</td>
+					<td><input type="email" name="email" placeholder="Enter A Valid Mail"value=""></td>
+				</tr>
+				<tr>
+					<td style="color:white;font-size:18px;">Phone Number</td>
+					<td><input type="number" name="phonenumber" placeholder="Give your phonenumber" value=""></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" name="signup" value="Submit"> 
+						<a href="login.html">Login</a>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>

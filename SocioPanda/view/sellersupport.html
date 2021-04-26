@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Seller Support</title>
+    <link rel="stylesheet" href="../css/deshboardstyle.css">
+
+
+    <script>
+        function validateform() {
+            var supporttitle = document.myform.supporttitle.value;
+            var description = document.myform.description.value;
+            if (supporttitle == null || supporttitle == "") {
+                alert("Title can't be blank");
+                return false;
+            }
+            if (description == null || description == "") {
+                alert("description can't be blank");
+                return false;
+            }
+            if (description.length <= 12) {
+                alert("Description must be longer than 12 characters'");
+            }
+        }
+
+// Suggestions
+
+function showHint(str) {
+  var xhttp;
+  if (str.length == 0) { 
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "gethint.php?q="+str, true);
+  xhttp.send();   
+}
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <section class="header">
+            <h2>Welcome SocioPanda Seller</h2>
+        </section>
+
+
+        <!-- Main Area -->
+        <section class="maincontain">
+            <section>
+               <div class="btn-menu">
+                <a href="selleraddproduct.php" class="btn-menu"> Add Product </a>
+                <a href="transitionhistory.php" class="btn-menu"> Transition History </a>
+                <a href="sellereasyprofile.html" class="btn-menu"> Update profile</a>
+                <a href="sellersupport.html" class="btn-menu"> Support Ticket</a>
+                <a href="selleradvancesetting.php" class="btn-menu">Change Password</a>
+                <a href="../controller/logout.php" class="btn-menu"> Logout</a>
+                <!--  -->
+            </div>
+            </section>
+            <form name="myform" action="" method="post" action="" onsubmit="return validateform()">
+                <fieldset>
+                    <LEGEND>Support Ticket</LEGEND>
+
+                    <table>
+                        <tr>
+                            <p>Tittle Suggestions: <span id="txtHint"></span></p>
+                            <td>Support Title</td>
+                            <td><input type="text" id="supporttitle" name="supporttitle" value="" placeholder="Title" onkeyup="showHint(this.value)"  />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Message</td>
+                            <td> <textarea id="description" name="description" type="text" rows="5" cols="40"
+                                    placeholder="Write your Message"></textarea> </td>
+                        </tr>
+                        <tr>
+                            <td> Add attachment : </td>
+                            <td>
+                                <input type="file" name="image" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" name="click" value="Submit">
+                                <input type="reset" name="click" value="reset">
+                                
+                    </table>
+
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="footer">
+            <h2>SocioPanda &copy; 2021</h2>
+        </section>
+    </div>
+</body>
+
+
+
+</html>

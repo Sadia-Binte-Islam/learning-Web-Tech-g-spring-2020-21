@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profie Update</title>
+    <link rel="stylesheet" href="../css/deshboardstyle.css">
+
+    <script > 
+        function validateform(){
+            var firstname = document.myform.firstname.value;
+            var lastname = document.myform.lastname.value;
+            var email = document.myform.email.value;
+            var phonenumber = document.myform.phonenumber.value;
+            var password = document.myform.password.value;
+    
+            if (firstname == null || firstname == "") {
+                    alert("First Name can't be blank");
+                    return false;
+                }
+            if (lastname == null || lastname == "") {
+                    alert("Last Name can't be blank");
+                    return false;
+                }
+    
+                if (email == null || email == "") {
+                    alert("Email can't be blank");
+                    return false;
+                }
+    
+                if (phonenumber == null || phonenumber == "") {
+                    alert("Phone Number can't be blank");
+                    return false;
+                }
+    
+                if (password == null || password == "") {
+                    alert("Pasword can't be blank");
+                    return false;
+                }
+    
+                if (password.length <= 6) {
+                    alert("Password must be longer than 6 characters'");
+                }
+        
+            else{
+                true;
+            }
+        }
+    
+        </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <section class="header">
+            <h2>Welcome SocioPanda Seller</h2>
+        </section>
+        <!-- Main Area -->
+        <section class="maincontain">
+            <section>
+              <div class="btn-menu">
+                <a href="selleraddproduct.php" class="btn-menu"> Add Product </a>
+                <a href="transitionhistory.php" class="btn-menu"> Transition History </a>
+                <a href="sellereasyprofile.html" class="btn-menu"> Update profile</a>
+                <a href="sellersupport.html" class="btn-menu"> Support Ticket</a>
+                <a href="selleradvancesetting.php" class="btn-menu">Change Password</a>
+                <a href="../controller/logout.php" class="btn-menu"> Logout</a>
+                <!--  -->
+            </div>
+            </section>
+
+            <form onsubmit="return validateform()" name="myform" method="post"  action="#">
+                <fieldset>
+                    <LEGEND>Easy profile</LEGEND>
+
+                    <table>
+                        <tr>
+                            <td>First Name:</td>
+                            <td><input type="text" name="firstname" value="" placeholder="Enter First Name" /></td>
+                        </tr>
+                        <tr>
+                            <td>Last name: </td>
+                            <td> <input type="text" name="lastname" placeholder="Enter Your Last name" value="" /> </td>
+                        </tr>
+                        <tr>
+                            <td>Email: </td>
+                            <td> <input type="email" name="email" placeholder="Enter a Valid Email address" value="" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Phone: </td>
+                            <td> <input type="text" name="phonenumber" placeholder="Enter a Valid phone number" value="" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Password: </td>
+                            <td> <input type="password" name="password" placeholder="Enter a password" value="" /> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="2">
+
+                                <input type="submit" name="click" value="Submit">
+                                <input type="reset" name="click" value="reset">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="footer">
+            <h2>SocioPanda &copy; 2021</h2>
+        </section>
+    </div>
+</body>
+
+</html>
